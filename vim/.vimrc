@@ -7,9 +7,13 @@ autocmd FileType c	setautoindent
 
 "HIGHLIGHT COLONNE CURSEUR
 set cursorcolumn
+set statusline+=col:\%c,
 
 "HIGHTLIGHT ESPACES EN TROP
 match ErrorMsg '\ \ \+'
 
 "HIGHTLIGHT WHITESPACE AVANT RETOUR A LA LIGNE
-match ErrorMsg '\s\+$'
+/\s\+$
+
+"ARCHIVE DES FICHIERS DE SAUVEGARDE
+set backupdir=~/.emacs/
